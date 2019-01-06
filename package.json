@@ -1,0 +1,14 @@
+{
+  "name": "leb128-bigint",
+  "version": "0.1.0",
+  "description": "Utilities to convert BigInt from / to LEB128 encoded byte sequence",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --experimental-modules test/index.mjs"
+  },
+  "author": "N.Shimizu <chikoski@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "power-assert": "^1.6.1"
+  }
+}
