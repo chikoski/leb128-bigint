@@ -1,23 +1,20 @@
-import { Pipe } from "../pipe";
-import { is_equal } from "./util";
+import { Pipe } from "../pipe"
+import { describe } from "test-harness"
+import assert from "power-assert"
 
-function test_write_number(pipe = new Pipe()) {
+describe("Pipe#write allows us to write numbers into its buffer", function () {
+  const pipe = new Pipe();
   const expected = "08"
   pipe.write(8);
-  const actual = pipe.dump();
-  is_equal(actual, expected);
-}
+  assert.equal(pipe.dump(), expected);
+});
 
-function test_write_hexString(pipe = new Pipe()) {
+describe("Pipe#write allows us to write byte pattern in hex string", function () {
+  const pipe = new Pipe();
   const value = "808080fd07";
   pipe.write("808080fd07");
   const actual = pipe.dump();
-  is_equal(actual, value);
-}
+  assert.equal(actual, value);
+});
 
-export function all() {
-  test_write_number();
-  test_write_hexString();
-}
-
-export default { all }
+export default {};

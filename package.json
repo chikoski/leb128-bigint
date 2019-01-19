@@ -4,11 +4,24 @@
   "description": "Utilities to convert BigInt from / to LEB128 encoded byte sequence",
   "main": "index.mjs",
   "scripts": {
-    "test": "node --experimental-modules test/index.mjs"
+    "test": "test-harness test/index.mjs"
   },
   "author": "N.Shimizu <chikoski@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "power-assert": "^1.6.1"
-  }
+    "power-assert": "^1.6.1",
+    "test-harness": "github:chikoski/esmodule-test-harness"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chikoski/leb128-bigint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chikoski/leb128-bigint/issues"
+  },
+  "homepage": "https://github.com/chikoski/leb128-bigint#readme"
 }
